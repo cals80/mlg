@@ -5,6 +5,7 @@ import play.api.libs.ws.ning.{NingWSClient}
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Success, Failure}
+import play.api.libs.json.Json
 
 /**
   * Created by carlossouza on 4/16/16.
@@ -12,12 +13,17 @@ import scala.util.{Success, Failure}
 
 object Hello {
   def main(args: Array[String]): Unit = {
+
     val wsClient = NingWSClient()
-    val futureResult: Future[JsValue] = wsClient.url("http://api.meetup.com/recommended/group_topics").get().map { response => response.json }
+    val APIKey = "4d6f643856f412a263841233916952"
+    val meetupSource = new MeetupSource(wsClient, APIKey)
+
+    val futureResult = meetupSource.getMembers(18804321) //.getCities
 
     futureResult.onComplete {
       case Success(m) => {
         println(m)
+        //println(Json.prettyPrint(m))
         wsClient.close()
       }
       case Failure(t) => {
