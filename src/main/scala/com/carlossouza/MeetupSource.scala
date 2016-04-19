@@ -1,5 +1,6 @@
 package com.carlossouza
 
+import com.carlossouza.models.{Member, Group, City}
 import play.api.libs.json.JsValue
 import play.api.libs.ws.ning.NingWSClient
 import scala.concurrent.Future
