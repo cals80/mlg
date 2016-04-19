@@ -82,5 +82,6 @@
     <orderEntry type="library" name="SBT: org.slf4j:slf4j-api:1.7.16:jar" level="project" />
     <orderEntry type="library" name="SBT: xerces:xercesImpl:2.11.0:jar" level="project" />
     <orderEntry type="library" name="SBT: xml-apis:xml-apis:1.4.01:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.slf4j:slf4j-nop:1.7.10:jar" level="project" />
   </component>
 </module>
