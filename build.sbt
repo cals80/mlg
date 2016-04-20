@@ -24,7 +24,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.slick"  %% "slick"                % "3.1.1",
   "com.typesafe.slick"  %% "slick-codegen"        % "3.1.1",
   "mysql"               % "mysql-connector-java"  % "5.1.38",
-  "org.slf4j"           % "slf4j-nop"             % "1.7.10"
+  "org.slf4j"           % "slf4j-nop"             % "1.7.10",
+  "com.github.scopt"    %% "scopt"                % "3.4.0"
 )
 
 // Uncomment to use Akka
